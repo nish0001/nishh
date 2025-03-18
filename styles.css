@@ -48,7 +48,7 @@ nav {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 150px 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/hero-bg.jpg');
   background-size: cover;
   background-position: center;
@@ -94,6 +94,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .playlist-card {
@@ -102,6 +103,11 @@ nav {
   overflow: hidden;
   width: 250px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.playlist-card:hover {
+  transform: scale(1.05);
 }
 
 .playlist-card img {
@@ -141,10 +147,19 @@ nav {
   font-size: 24px;
   cursor: pointer;
   margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.player-controls button:hover {
+  color: #1db954;
 }
 
 .track-info {
   font-size: 16px;
+}
+
+.volume-control input {
+  width: 100px;
 }
 
 /* Footer */
