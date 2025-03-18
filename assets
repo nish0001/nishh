@@ -1,0 +1,7 @@
+<!-- Logo -->
+<img src="assets/logo.png" alt="Spotify Clone Logo">
+
+<!-- Hero Image -->
+<div style="background-image: url('assets/hero-bg.jpg');">
+    <h1>Stream Your Favorite Music</h1>
+</div>
