@@ -1,119 +1,175 @@
-/* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  background: #1e1e1e;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+/* General Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.music-player {
-  background: #282828;
-  border-radius: 15px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  width: 350px;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1db954;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #1ed760;
+}
+
+/* Playlist Section */
+.playlists {
+  padding: 60px 20px;
   text-align: center;
 }
 
-.album-art img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  margin-bottom: 15px;
+.playlists h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
-.song-info h2 {
-  margin: 10px 0 5px;
-  font-size: 24px;
-}
-
-.song-info h3 {
-  margin: 0;
-  font-size: 16px;
-  color: #b3b3b3;
-}
-
-.progress-container {
-  background: #404040;
-  border-radius: 5px;
-  cursor: pointer;
-  height: 5px;
-  margin: 20px 0;
-  position: relative;
-  width: 100%;
-}
-
-.progress {
-  background: #1db954;
-  border-radius: 5px;
-  height: 100%;
-  width: 0%;
-  transition: width 0.1s;
-}
-
-.controls {
+.playlist-grid {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 20px;
-  margin: 20px 0;
 }
 
-.controls button {
+.playlist-card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+}
+
+.playlist-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.playlist-card h3 {
+  font-size: 20px;
+  margin: 15px 0 10px;
+}
+
+.playlist-card p {
+  font-size: 14px;
+  color: #aaa;
+  padding: 0 15px 20px;
+}
+
+/* Music Player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-controls button {
   background: none;
   border: none;
   color: #fff;
   font-size: 24px;
   cursor: pointer;
-  transition: color 0.3s;
+  margin: 0 10px;
 }
 
-.controls button:hover {
-  color: #1db954;
+.track-info {
+  font-size: 16px;
 }
 
-.volume-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
 }
 
-.volume-container i {
-  font-size: 18px;
-}
-
-.volume-container input {
-  width: 100px;
-}
-
-.playlist {
-  margin-top: 20px;
-  text-align: left;
-}
-
-.playlist h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.playlist ul {
+footer ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.playlist li {
-  padding: 10px;
-  cursor: pointer;
-  transition: background 0.3s;
+footer ul li {
+  display: inline;
+  margin: 0 15px;
 }
 
-.playlist li:hover {
-  background: #404040;
-  border-radius: 5px;
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #1db954;
 }
